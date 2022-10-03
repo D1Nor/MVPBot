@@ -27,6 +27,7 @@ SAMPLE_RANGE_NAME_ADIIT = 'List1!B2:B100'
 bote = Bot(TOKENBOT)
 
 
+
 def main():
     creds = None
     list_vidio = []
@@ -113,7 +114,7 @@ def timer_set(message):
         bot.send_message(message.chat.id, "Установите таймер отправки напоминаний в секундах")
         numb = message.text
 
-        if numb == int:
+        if numb.isdigit():
             tim = int(numb)
             Flag = True
             timer(tim, message)
